@@ -1,0 +1,617 @@
+@font-face {
+  font-family: "DOSMyungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  /* Color*/
+  --color-yellow: #ffdd00;
+  --color-orange: #ffca3a;
+  --color-dark-orange: #d6aa32;
+  --color-light-yellow: #f6e265;
+  --color-dark-yellow: #c3b45a;
+  --color-light-blue: #a7d1f7;
+  --color-blue: #0088ff;
+  --color-dark-blue: #6fbcff;
+  --color-gray: rgb(246, 246, 246);
+  --color-black: #232323;
+  --color-white: #fff;
+  --color-light-gray: #c8c8c8;
+  --color-light-purple: #deddf8;
+  --color-purple: #c9c7ff;
+  --color-dark-purple: #736fff;
+  --color-dark-gray: rgb(131, 131, 131);
+}
+
+/* 링크복사 display: none; */
+#copy-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  background-image: url(/images/background.png);
+  font-family: "Roboto", sans-serif;
+}
+
+.bodycontent {
+  width: 100%;
+  height: max-content;
+}
+
+.start {
+  width: 100%;
+  animation: fadein 1.5s;
+  -moz-animation: fadein 1.5s;
+  -webkit-animation: fadein 1.5s;
+  -o-animation: fadein 1.5s;
+}
+
+.box {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+  border-radius: 0 0 24px 24px;
+  background-color: var(--color-purple);
+  border: none;
+}
+
+#box-logo {
+  width: 90%;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+#box-main {
+  width: 50%;
+  height: 190px;
+  margin-bottom: 10px;
+  margin-top: -100px;
+  margin-left: 40px;
+}
+
+#start-btn {
+  width: 80%;
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-black);
+  text-shadow: -1px 0 rgb(94, 94, 94), 0 1px rgb(94, 94, 94), 1px 0 rgb(94, 94, 94), 0 -1px rgb(94, 94, 94);
+  font-size: 1.6rem;
+  font-family: "DOSMyungjo";
+}
+
+#start-btn:hover {
+  width: 80%;
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-dark-purple);
+  font-size: 1rem;
+  text-shadow: -1px 0 rgb(94, 94, 94), 0 1px rgb(94, 94, 94), 1px 0 rgb(94, 94, 94), 0 -1px rgb(94, 94, 94);
+  font-size: 1.7rem;
+  font-family: "DOSMyungjo";
+}
+
+.visitor-number {
+  font-family: "DOSMyungjo";
+  width: 100%;
+  height: 45px;
+  padding: 14px 20px 0 20px;
+}
+
+.visitor-number-form {
+  height: 100%;
+  border-radius: 0px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visitor-number-form a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.visitor-number-form img {
+  width: 47%;
+  height: 75%;
+}
+
+.visitor-number-nofi {
+  font-family: "DOSMyungjo";
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#visitor-number-span {
+  font-size: 1rem;
+}
+
+.share {
+  width: 100%;
+  padding: 34px 20px 0 20px;
+}
+
+.share-str {
+  width: 100%;
+  background-color: var(--color-light-purple);
+  padding: 20px 10px 20px 10px;
+  border-radius: 12px 12px 12px 12px;
+
+  /* 추가한부분 */
+  font-family: "DOSMyungjo";
+  text-align: center;
+}
+
+#share-p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.share-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#share-btn {
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  font-family: "DOSMyungjo";
+  border: none;
+  color: var(--color-black);
+  border-radius: 12px 12px 12px 12px;
+  background-color: var(--color-purple);
+}
+
+.link {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#link-img {
+  width: 100%;
+}
+
+.advertisement {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advertisement-content {
+  width: 70%;
+  height: 100%;
+}
+
+#advertisement-jocoding {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-black);
+  width: 100%;
+  height: 180px;
+  margin-top: 30px;
+  padding: 35px 30px 0 30px;
+}
+
+/* .footer-logo {
+  margin: 15px 0px 0px 25px;
+  border: 1px solid var(--color-white);
+  border-radius: 75%;
+  width: 100px;
+  height: 80px;
+}
+
+#footer-logo-img {
+  padding: 7px;
+  width: 100%;
+  height: 100%;
+} */
+
+#footer-h {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-family: "DOSMyungjo";
+}
+#footer-p {
+  color: var(--color-light-gray);
+  font-size: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.question {
+  display: none;
+  animation: fadein 1.5s;
+  -moz-animation: fadein 1.5s;
+  -webkit-animation: fadein 1.5s;
+  -o-animation: fadein 1.5s;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress {
+  width: 90%;
+  margin: 7vh auto 0 auto;
+  box-sizing: content-box;
+  border: 2px solid var(--color-black);
+  background-color: var(--color-white);
+}
+
+.progress-bar {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 0.7rem;
+  font-family: "DOSMyungjo";
+  color: var(--color-white);
+  border-right: 2px solid var(--color-black);
+  background-color: var(--color-black);
+}
+
+.progress img {
+  position: relative;
+  width: 3%;
+  height: 3%;
+}
+
+.question-title.effect {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  -o-animation: fadein 1s;
+}
+
+.question-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  margin: 2vh 0 0 0;
+  padding: 0px 4px 0px 4px;
+}
+
+.question-title #title {
+  font-family: "DOSMyungjo";
+  /* font-family: "Black Han Sans"; */
+  font-size: 1.2rem;
+}
+
+.question-btn.effect {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  -o-animation: fadein 1s;
+}
+
+.question-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45vh;
+}
+
+.question-btn button {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  font-family: "DOSMyungjo";
+  /* font-family: "Black Han Sans"; */
+  border-radius: 12px;
+  outline: none;
+  color: var(--color-black);
+  width: 90%;
+  height: 15vh;
+  margin-bottom: 2vh;
+}
+.question-btn button:hover {
+  background-color: var(--color-light-purple);
+  outline: none;
+  color: var(--color-black);
+  width: 90%;
+  height: 15vh;
+  margin-bottom: 2vh;
+}
+
+.kakao-advertisement {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  animation: fadein 2s;
+}
+
+.result-content-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#result-content-img {
+  width: 97%;
+  height: 100%;
+}
+
+.result-video {
+  width: 100%;
+}
+
+.result-video-conent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-video-conent iframe {
+  width: 94%;
+  height: 270px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+#result-video-h {
+  font-family: "DOSMyungjo";
+  font-size: 1.5rem;
+}
+
+.border {
+  width: 80%;
+  margin: 10px auto 10px auto;
+  border: 1px solid var(--color-gray);
+  box-sizing: content-box;
+}
+.restart {
+  width: 100%;
+  padding: 34px 20px 0 20px;
+
+  /* 바꾼부분 */
+  text-align: center;
+}
+
+.restart-content {
+  width: 100%;
+  background-color: var(--color-gray);
+  padding: 20px 10px 20px 10px;
+  border-radius: 12px 12px 12px 12px;
+}
+
+.restart-btn-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.restart {
+  width: 100%;
+  padding: 34px 20px 0 20px;
+}
+
+.restart-content {
+  width: 100%;
+  background-color: var(--color-light-blue);
+  padding: 20px 10px 20px 10px;
+  border-radius: 12px 12px 12px 12px;
+  font-family: "DOSMyungjo";
+}
+
+#restart-p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.restart-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#restart-a {
+  width: 100%;
+}
+
+#restart-btn {
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  font-family: "DOSMyungjo";
+  /* 바꾼부분 */
+  border: none;
+  border-radius: 12px 12px 12px 12px;
+  background-color: var(--color-dark-blue);
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-gray);
+  z-index: 5;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-str {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+#loading-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+/* 모바일 */
+@media screen and (min-width: 430px) {
+  .bodycontent {
+    max-width: 430px;
+  }
+}
+
+/* 아이폰X */
+@media screen and (max-width: 380px) {
+  .result-video-conent iframe {
+    height: 200px;
+  }
+
+  #result-video-h {
+    font-family: "DOSMyungjo";
+    font-size: 1.3rem;
+  }
+}
+
+/* 아이폰7 */
+@media screen and (max-width: 330px) {
+  .visitor-number-form {
+    font-size: 0.8rem;
+  }
+  #visitor-number-span {
+    font-size: 0.9rem;
+  }
+
+  #share-p {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  #share-btn {
+    width: 100%;
+    padding: 5px 10px 10px 10px;
+    outline: none;
+    font-family: "DOSMyungjo";
+  }
+  #footer-h {
+    color: var(--color-white);
+    font-size: 1.2rem;
+  }
+}
+
+/* 갤럭시 폴드*/
+@media screen and (max-width: 290px) {
+  .bodycontent {
+    max-width: 280px;
+  }
+  .question-btn button {
+    font-size: 0.7rem;
+  }
+  .question-btn button:hover {
+    font-size: 0.7rem;
+  }
+  #share-noti {
+    font-size: 0.9rem;
+  }
+  #restart-noti {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+    opacity: -0.7;
+    margin-left: 99%;
+    width: 1%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    opacity: 1;
+  }
+}

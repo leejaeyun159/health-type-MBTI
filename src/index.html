@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 미리보기 open graph태그&사이트 설명 태그 -->
+    <meta property="og:url"                content="https://healthtype.netlify.app/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="운동유형 테스트" />
+    <meta property="og:description"        content="무~야~호!그만큼 운동이 좋으신거지" />
+    <meta property="og:image"              content="/images/ogimg.png" />
+    <meta name="description"               content="당신은 어떤 운동을 좋아하시나요? 운동유형 테스트는 본인의 운동타입에 대한 이해도를 높입니다. 본인의 운동동료와의 관계와 간단하고 객관인적인 유형파악으로 가볍게 즐길 수 있는 콘텐츠를 마련했습니다. (*본 테스트는 전문성과는 거리가 있으니 재미로만 즐겨주시길 바랍니다)">
+
+    <title>운동유형 테스트</title>
+    <link rel="icon" type="img/png" href="/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script data-ad-client="ca-pub-1146927919783815" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+  <body class="bodycontent">
+    <input id="copy-text" value="https://healthtype.netlify.app/"readonly />
+    <article class="start">
+      <div class="box">
+        <img id="box-logo" src="/images/main.png" alt="" />
+        <img id="box-main" src="/images/main_char.gif" alt="" />
+        <button id="start-btn" type="button" class="btn btn-success" onclick="start();">- PRESS START -</button>
+      </div>
+      <div class="visitor-number">
+        <div class="visitor-number-form">
+          <a href="https://healthtype.netlify.app/"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhealthtype.netlify.app&count_bg=%23C9C7FF&title_bg=%23C9C7FF&icon=&icon_color=%23E7E7E7&title=%EB%88%84%EC%A0%81+%EC%A1%B0%ED%9A%8C%EC%88%98&edge_flat=false"/></a>
+        </div>
+      </div>
+      <div class="visitor-number-nofi">
+        <span id="visitor-number-span">본 테스트는 전문성과는 거리가 있으니</span>
+        <span id="visitor-number-span">재미로만 즐겨주시기 바랍니다 😅</span>
+      </div>
+      <div class="share">
+        <div class="share-str">
+          <p id="share-p">👦🏻친구와 함께하기👩🏻</p>
+          <p id="share-noti"><strong>해당 사이트</strong> 주소가 <strong>복사</strong>됩니다.</p>
+          <div class="share-btn">
+            <!-- 버튼 클릭시 copy_to_clipboard -->
+            <button id="share-btn" onclick="copy_to_clipboard()">링크 복사하기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="kakao-advertisement">
+        <ins class="kakao_ad_area" style="display:none;" 
+          data-ad-unit    = "DAN-1D4rZ7Hlts51YS9Q" 
+          data-ad-width   = "320" 
+          data-ad-height  = "100"></ins> 
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+      </div>
+
+      <div class="kakao-advertisement">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-jWmm9GognLthILOy" 
+        data-ad-width   = "300" 
+        data-ad-height  = "250"></ins> 
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+      </div>
+      <div class="footer">
+        <div class="footer-str">
+          <h3 id="footer-h">이양반아</h3>
+          <p id="footer-p">팀원: 윤철중, 이명현, 이재윤</p>
+          <p id="footer-p">문의: noww_yun@likelion.org</p>
+          <p id="footer-p">Copyright © 2021 이양반아. 모든 권리 보유.</p>
+        </div>
+        <!-- <div class="footer-logo">
+          <img id="footer-logo-img" src="/images/yangban-white.PNG" alt="" />
+        </div> -->
+      </div>
+    </article>
+    <article class="question">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: calc(100 / 12 * 1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">10%</div>
+      </div>
+      <div class="question-title">
+        <h2 id="title" class="text-center">문제</h2>
+      </div>
+      <input id="type" type="hidden" value="EI" />
+      <div class="question-btn">
+        <button id="A" type="button">Info</button>
+        <button id="B" type="button">Info</button>
+      </div>
+      <!-- TODO: kakao adifit광고 넣기-->
+      <div class="kakao-advertisement">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-xRZSalN9Snrmy1OU" 
+        data-ad-width   = "320" 
+        data-ad-height  = "50">
+      </ins> 
+      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+      </div>
+      <div class="footer">
+        <div class="footer-str">
+          <h3 id="footer-h">이양반아</h3>
+          <p id="footer-p">팀원: 윤철중, 이명현, 이재윤</p>
+          <p id="footer-p">문의: noww_yun@likelion.org</p>
+          <p id="footer-p">Copyright © 2021 이양반아. 모든 권리 보유.</p>
+        </div>
+        <!-- <div class="footer-logo">
+          <img id="footer-logo-img" src="/images/yangban-white.PNG" alt="" />
+        </div> -->
+      </div>
+    </article>
+    <article class="loading">
+      <div class="loading-content">
+        <h2 id="loading-str" style="font-family: 'DOSMyungjo'">득근득근! 결과 산출중..!!</h2>
+        <img id="loading-img" src="/images/loading.gif" alt="" />
+      </div>
+    </article>
+    <article class="result">
+      <div class="result-content">
+        <div class="result-title"></div>
+        <div class="result-content-img">
+          <img id="result-content-img" src="" alt="result" />
+        </div>
+        <div class="result-video">
+          <div class="result-video-conent">
+            <br>
+            <br>
+            <h2 id="result-video-h">🏋추천영상🏋</h2>
+            <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="border"></div>
+        <!-- TODO: kakao adifit광고 넣기-->
+        <div class="kakao-advertisement">
+          <ins class="kakao_ad_area" style="display:none;" 
+          data-ad-unit    = "DAN-1D4rZ7Hlts51YS9Q" 
+          data-ad-width   = "320" 
+          data-ad-height  = "100"></ins> 
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        </div>
+        <div class="share">
+          <div class="share-str">
+            <p id="share-p">👦🏻친구와 함께하기👩🏻</p>
+            <p id="share-noti"><strong>해당 사이트</strong> 주소가 <strong>복사</strong>됩니다.</p>
+            <div class="share-btn">
+              <!-- 버튼 클릭시 copy_to_clipboard -->
+              <button id="share-btn" onclick="copy_to_clipboard()">링크 복사하기</button>
+            </div>
+          </div>
+        </div>
+        <div class="restart">
+          <div class="restart-content">
+            <p id="restart-p">🏃🏻다시 테스트하기🏃🏻‍♀</p>
+            <p id="restart-noti"><strong>처음 홈 화면</strong>으로 <strong>이동</strong>합니다.</p>
+            <div class="restart-btn">
+              <a id="restart-a" href="">
+                <button id="restart-btn">다시하기</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="kakao-advertisement">
+          <ins class="kakao_ad_area" style="display:none;" 
+          data-ad-unit    = "DAN-jWmm9GognLthILOy" 
+          data-ad-width   = "300" 
+          data-ad-height  = "250"></ins> 
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        </div>
+        <div class="footer">
+          <div class="footer-str">
+            <h3 id="footer-h">이양반아</h3>
+            <p id="footer-p">팀원: 윤철중, 이명현, 이재윤</p>
+            <p id="footer-p">문의: noww_yun@likelion.org</p>
+            <p id="footer-p">Copyright © 2021 이양반아. 모든 권리 보유.</p>
+          </div>
+          <!-- <div class="footer-logo">
+            <img id="footer-logo-img" src="/images/yangban-white.PNG" alt="" />
+          </div> -->
+        </div>
+    </article>
+    <input type="hidden" id="EI" value="0" />
+    <input type="hidden" id="SN" value="0" />
+    <input type="hidden" id="TF" value="0" />
+    <input type="hidden" id="JP" value="0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var num = 1;
+      var q = {
+        4: { title: "Q4. 헬스장에 처음 가봤을 때", type: "EI", B: "다른 사람들에게 먼저 말을 걸어</br>운동법을 물어본다", A: "운동법이 미숙해 기구 주변만 서성인다" },
+        6: { title: "Q6. 주말에 시간 날 때", type: "EI", A: "운동을 하러 밖으로 나간다", B: "홈트를 한다" },
+        12: { title: "Q12. 평소 운동할 때", type: "EI", B: "여러 사람들과 어울려 할 수 있는</br>운동을 선호한다", A: "혼자서도 할 수 있는 운동을 선호한다" },
+        1: {
+          title: "Q1. 부상위험이 살짝 있지만,</br> 고효율 운동을 추천 받았을 때",
+          type: "SN",
+          A: "부상위험이 있으니 전문적으로</br> 배우기 전까진 보류한다",
+          B: "자신의 운동능력을 믿고 시도해본다",
+        },
+        5: {
+          title: "Q5. 이번 세트에 목표량을 못 채웠을 때,</br> 다음 세트부터",
+          type: "SN",
+          B: "안전을 위해서 할 수 있는 만큼만 한다",
+          A: "끊어서 하는 한이 있어도 갯수를 채운다",
+        },
+        2: { title: "Q2. 반나절이상 소요되는</br> 긴 약속이 잡혔을 때", type: "SN", A: "약속시간보다 일찍 준비해서</br> 평소 루틴으로 운동한다", B: "평소보다는 가벼운 루틴으로 운동한다" },
+        10: {
+          title: "Q10. 다이어트를 결심하고,</br> 오늘 맛있는 음식을 보게 되었을 때",
+          type: "TF",
+          A: "내일로 미루면 영영 못한다.</br> 오늘부터 다이어트",
+          B: "맛있으면 0칼로리~ 맛있게 먹자</br> 다이어트는 내일부터 >ㅠ<",
+        },
+        8: {
+          title: "Q8. 주변인이 몸 자랑을 했을 때",
+          type: "TF",
+          B: "괜찮은데 여기는 좀 더 하는 게 좋겠다",
+          A: "오~ 어↘깨↗깡↘패→야↗?",
+        },
+        7: { title: "Q7. 주변인이 식단조절로 힘들어할 때", type: "TF", A: "어떤식으로 하길래 힘든데?", B: "많이 힘들지 ㅠ.ㅠ" },
+        9: { title: "Q9. 운동 계획을 세울 때", type: "JP", A: "일주일 동안 어떤 운동을 할지 계획을 짠다", B: "그날그날에 느낌대로 운동한다" },
+        11: { title: "Q11. 나는 보통", type: "JP", B: "운동부터 하고 재미있게 논다", A: "재미있게 놀고 난 후 운동을 한다" },
+        3: {
+          title: "Q3. 헬스장이 문을 닫아</br> 오늘은 못 가게 되었을 때",
+          type: "JP",
+          A: "꿩 대신 닭! 홈트라도 하며</br> 근손실을 방지한다",
+          B: "어쩔 수 없지^^ 근성장을 위해서 하루 쉰다",
+        },
+      };
+      // type: 성격유향, src: 추천운동 영상주소, img: 결과이미지파일
+      var result = {
+        ESFJ: { type: "ESFJ", src: "https://www.youtube.com/embed/Tzvm_8x0gog", img: "/images/esfj.png" },
+        ENFP: { type: "ENFP", src: "https://www.youtube.com/embed/V80YR9N9fUg", img: "/images/enfp.png" },
+        ESFP: { type: "ESFP", src: "https://www.youtube.com/embed/okloHVTAIq0", img: "/images/esfp.png" },
+        ENTJ: { type: "ENTJ", src: "https://www.youtube.com/embed/ofg9Nko9yZM", img: "/images/entj.png" },
+        ISTP: { type: "ISTP", src: "https://www.youtube.com/embed/6rZVZxy-eRQ", img: "/images/istp.png" },
+        INTJ: { type: "INTJ", src: "https://www.youtube.com/embed/KTA3b0wfLxE", img: "/images/intj.png" },
+        ISFJ: { type: "ISFJ", src: "https://www.youtube.com/embed/yka0VGRh1oc", img: "/images/isfj.png" },
+        ISFP: { type: "ISFP", src: "https://www.youtube.com/embed/pYY2PKBbq-k", img: "/images/isfp.png" },
+        ISTJ: { type: "ISTJ", src: "https://www.youtube.com/embed/IfJcq4LDXKE", img: "/images/istj.png" },
+        ESTP: { type: "ESTP", src: "https://www.youtube.com/embed/s1-kXGp7jiw", img: "/images/estp.png" },
+        ENTP: { type: "ENTP", src: "https://www.youtube.com/embed/kilqVD8OV_A", img: "/images/entp.png" },
+        ENFJ: { type: "ENFJ", src: "https://www.youtube.com/embed/kjjTWx29aus", img: "/images/enfj.png" },
+        INFJ: { type: "INFJ", src: "https://www.youtube.com/embed/FFWklphDy8A", img: "/images/infj.png" },
+        INTP: { type: "INTP", src: "https://www.youtube.com/embed/ey6ammmnf8A", img: "/images/intp.png" },
+        ESTJ: { type: "ESTJ", src: "https://www.youtube.com/embed/VTmy4pC6P9A", img: "/images/estj.png" },
+        INFP: { type: "INFP", src: "https://www.youtube.com/embed/NSeCXVAi2NU", img: "/images/infp.png" },
+      };
+
+      function copy_to_clipboard() {
+        var copyText = document.getElementById("copy-text");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("Copy");
+        alert("복사되었습니다, 감사합니다:)");
+      }
+
+      function loading() {
+        $(".loading").show();
+        setTimeout(() => {
+          $(".loading").hide();
+          $(".result").show();
+        }, 3200);
+      }
+      function resetAnimation() {
+        $(".question-title").addClass("effect");
+        $(".question-btn").addClass("effect");
+        setTimeout(() => {
+          $(".question-title").removeClass("effect");
+          $(".question-btn").removeClass("effect");
+        }, 750);
+      }
+
+      function start() {
+        $(".start").hide();
+        $(".question").show();
+        next();
+      }
+      $("#A").click(function () {
+        var type = $("#type").val();
+        var preValue = $("#" + type).val();
+        $("#" + type).val(parseInt(preValue) + 1);
+        resetAnimation();
+        next();
+      });
+      $("#B").click(function () {
+        resetAnimation();
+        next();
+      });
+      function next() {
+        if (num == 13) {
+          $(".question").hide();
+          loading();
+          var mbti = "";
+          $("#EI").val() < 2 ? (mbti += "I") : (mbti += "E");
+          $("#SN").val() < 2 ? (mbti += "N") : (mbti += "S");
+          $("#TF").val() < 2 ? (mbti += "F") : (mbti += "T");
+          $("#JP").val() < 2 ? (mbti += "P") : (mbti += "J");
+          $("#result-content-img").attr("src", result[mbti]["img"]);
+          $(".result-video-conent iframe").attr("src", result[mbti]["src"]);
+        } else {
+          $(".progress-bar").attr("style", "width: calc(100/12*" + num + "%)");
+          $(".progress-bar").html(parseInt((100 / 12) * num) + "%");
+          $("#title").html(q[num]["title"]);
+          $("#type").val(q[num]["type"]);
+          $("#A").html(q[num]["A"]);
+          $("#B").html(q[num]["B"]);
+          num++;
+        }
+      }
+    </script>
+  </body>
+</html>
